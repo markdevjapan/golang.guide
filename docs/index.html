@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Golang guide</title>
+<link href="https://fonts.googleapis.com/css?family=Aleo:400,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dist/css/bs.min.css" />
+<link rel="stylesheet" href="dist/css/fullpage.min.css" />
+<link rel="stylesheet" href="dist/css/gl-custom.css" />
+<!--[if IE]>
+    <script type="text/javascript">
+            var console = { log: function() {} };
+    </script>
+<![endif]-->
+
+<style type="text/css">
+#home-flex-container {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.left, .right {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.left {
+        order: 2;
+    }
+    .right {
+        order: 1;
+    }
+    .left .v-align {
+        top: 30%;
+    }
+
+@media screen and (min-width: 1100px) {
+    #home-flex-container {
+        flex-direction: row;
+    }
+    .left {
+        order: 1;
+    }
+    .right {
+        order: 2;
+    }
+    .left, .right {
+        max-width: 50%;
+        text-align: left;
+    }
+    .left .v-align {
+        top: 50%;
+    }
+}
+
+</style>
+</head>
+<body>
+<div id="menu-icons">
+    <span data-toggle="modal" data-target="#signupEmailModal"><i class="fas fa-envelope-open-text mb-3"></i></span>
+</div>
+<div id="fullpage">
+	<div class="section" id="section0">
+		<div class="wrapper h-100" id="home-screen-one">
+            <div id="home-flex-container" class="h-100">
+                <div class="left">
+                    <div class="v-align">
+                        <h1 class="mb-3"><span class="light-orange">Golang</span> <span class="light-blue">Guide</span></span></h1>
+                        <h2><span class="dark-blue">Learn to code with Go and become a true Gopher!</span></h2>
+                        <small>Coming soon, click the envelope icon to sign up to the mailing list</small>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="v-align banner-image">
+                        <img src="golang-guide-home-banner.png" alt="golang guide banner" />
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="flex-container h-100">
+                <div class="row h-100">
+                    <div class="left">
+                        <div class="v-align">
+                            <h1 class="mb-3"><span class="light-orange">Golang</span> <span class="light-blue">Guide</span></span></h1>
+                            <h2><span class="dark-blue">Learn to code with Go and become a true Gopher!</span></h2>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="v-align banner-image">
+                            <img src="golang-guide-home-banner.png" alt="golang guide banner" />
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+	</div>
+</div>
+
+<div class="modal fade" id="signupEmailModal" tabindex="-1" role="dialog" aria-labelledby="signupEmailModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col">
+                    <h2 class="text-center"><span class="light-orange">Mailing</span> <span class="light-blue">List</span></h2>
+                    <p class="text-center" id="signup-status"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" style="max-width: 200px;">
+                    <img src="dist/img/gophers/gopher-signup.png" alt="Sign up to golang" style="max-width: 150px;">
+                </div>
+                <div class="col">
+                    <div class="p-4 pt-0 mt-0">
+                        <div class="form-group">
+                            <div class="form-label-group">
+                                <input type="text" id="nameInput" class="form-control" placeholder="Name" required autofocus="true">
+                                <label for="nameInput">Name</label>
+                              </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-label-group">
+                                <input type="email" id="emailInput" class="form-control" placeholder="Email address" required autofocus="">
+                                <label for="emailInput">Email address</label>
+                                <small id="emailValidationStatus"></small>
+                              </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <p><small>By signing up you agree for the storing of your email address to be used ONLY to contact you with updates to this platform</small></p>
+                    <button type="submit" class="btn" id="validate">Sign up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+<!-- jquery -->
+<script src="dist/js/jq.js"></script>
+
+<!-- fullpage -->
+<script src="dist/js/fp.js"></script>
+
+<!-- bootstrap and BS popper -->
+<script src="dist/js/bs.js"></script>
+<script src="dist/js/bsp.js"></script>
+
+<!-- font awesome -->
+<script src="dist/js/fa.js"></script>
+
+<!-- firebase -->
+<script src="dist/js/fb.js"></script>
+<script defer src="dist/js/fba.js"></script>
+<script src="dist/js/fbdb.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAY_TJGy3KqgMbkI2YftV_QWGXtOYlt-9Q",
+    authDomain: "golang-guide.firebaseapp.com",
+    databaseURL: "https://golang-guide.firebaseio.com",
+    projectId: "golang-guide",
+    storageBucket: "golang-guide.appspot.com",
+    messagingSenderId: "1032978408054",
+    appId: "1:1032978408054:web:0c6b40f5926e947e6c7557"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+    var myFullpage = new fullpage('#fullpage', {
+        anchors: ['firstPage', 'secondPage'],
+        sectionsColor: ['#fff', '#1BBC9B', '#7E8F7C'],
+        navigation: false,
+        responsiveWidth: 900,
+        afterResponsive: function(isResponsive){
+
+        }
+
+    });
+
+    const db = firebase.database();
+
+    String.prototype.hashCode = function(){
+        var hash = 0;
+        if (this.length == 0) return hash;
+        for (i = 0; i < this.length; i++) {
+            char = this.charCodeAt(i);
+            hash = ((hash<<5)-hash)+char;
+            hash = hash & hash; // Convert to 32bit integer
+        }
+        return hash;
+    }
+
+    var bStatus = false;
+
+    function validateButtonStatus() {
+        bStatus  = ! bStatus ;
+        bStatus ? ($('#validate').prop("disabled", true), $('#validate').html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>')) :  ($('#validate').prop("disabled", false), $('#validate').html('Sign up'));
+    }
+
+
+
+    function validateEmail(email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+    function validateName(name) {
+        var re = /^[a-zA-Z ]{3,}$/;
+        return re.test(String(name).toLowerCase());
+    }
+
+    function validate() {
+
+        var ev = $("#emailInput").val(),
+            nv = $("#nameInput").val(),
+            ei = $("#emailInput"),
+            ni = $("#nameInput");
+
+        validateEmail(ev) ? ($(ei).removeClass('is-invalid'), $(ei).addClass('is-valid')) : ($(ei).removeClass('is-valid'), $(ei).addClass('is-invalid'));
+        validateName(nv) ? ($(ni).removeClass('is-invalid'), $(ni).addClass('is-valid')) : ($(ni).removeClass('is-valid'), $(ni).addClass('is-invalid'));
+
+        if (validateEmail(ev) && validateName(nv)) {
+            validateButtonStatus();
+
+            var d = {name : nv, email: ev}
+            writeUserData(d);
+        }
+
+
+    }
+
+    function handleSuccess() {
+        $("#validate").html('<i class="fas fa-check"></i> Success');
+        $("#validate").addClass('btn-success');     
+    }
+
+
+    function writeUserData(d) {
+        $('#emailInput').attr('disabled','disabled');
+        $('#nameInput').attr('disabled','disabled');
+        
+        
+        db.ref("/signup_emails").child(d.email.hashCode()).set({
+            name: d.name,
+            email: d.email
+        }, function(e) {
+            
+            if (!e) {
+                handleSuccess()
+            } else {
+                console.log(e);
+            }
+        })
+    }
+    $("#validate").on("click", validate);
+</script>
+</body>
+</html>

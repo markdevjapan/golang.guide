@@ -1,0 +1,206 @@
+
+html, body {
+    height: 100%;
+}
+.left, .right {
+    height: 100%;
+}
+.left {
+    /* background: yellow; */
+}
+.left .v-align {
+    width: 50%;
+    height: 180px;
+}
+
+.right .v-align {
+    height: 400px;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Aleo', serif;
+}
+#home-screen-one {
+    min-height: 100%;
+}
+#home-screen-one h1 {
+    font-weight: 700;
+}
+
+.v-align {
+    
+    margin: 0 auto;
+    /* background-color: blue; */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.banner-image img {
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.light-orange {
+    color: #F2B042;
+}
+.light-blue {
+    color: #54C9E0;
+}
+.light-blue-bg {
+    background-color: #54C9E0;
+}
+.dark-blue {
+	color: #245761;
+}
+.dark-blue-bg {
+	background-color: #245761;;
+}
+
+.white-text {
+    color: #fff;
+}
+#menu-icons {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	font-size: 30px;
+	padding: 5px;
+	z-index: 10;
+	max-width: 50px;
+	color: #245761;
+}
+#menu-icons label:hover, #menu-icons i:hover {
+	cursor: pointer;
+	color: #000;
+}
+#nav-toggle, #thanks-toggle { display: none; }
+
+.panel { transition: margin 0.2s ease; position: fixed; left: 0; top: 0; height: 100%; width: 100%; margin-left: -100%; z-index: 9; }
+
+#nav-toggle:checked ~ #nav-panel.panel, #thanks-toggle:checked ~ #thanks-panel.panel { margin-left: 0; }
+#nav-toggle:checked ~ #menu-icons i { display: none; }
+
+
+#signupEmailModal .modal-body {
+    padding-top: 0;
+}
+
+#signupEmailModal #validate {
+    border: 1px solid #000;
+    color: #000;
+}
+
+#signupEmailModal #validate.btn-success {
+  border: 1px solid green;
+  color:#fff;
+}
+.modal-content {
+	text-align: center;
+}
+
+.modal-content img {
+	max-width: 200px;
+}
+
+.modal-header {
+	border: none;
+}
+
+nav ul {
+    padding-left: 0;
+}
+nav ul li {
+    list-style: none;
+}
+
+
+
+.form-signin {
+    width: 100%;
+    max-width: 420px;
+    padding: 15px;
+    margin: auto;
+  }
+  
+  .form-label-group {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  
+  .form-label-group > input,
+  .form-label-group > label {
+    height: 3.125rem;
+    padding: .75rem;
+  }
+  
+  .form-label-group > label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    margin-bottom: 0; /* Override default `<label>` margin */
+    line-height: 1.5;
+    color: #495057;
+    pointer-events: none;
+    cursor: text; /* Match the input under the label */
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    transition: all .1s ease-in-out;
+  }
+  
+  .form-label-group input::-webkit-input-placeholder {
+    color: transparent;
+  }
+  
+  .form-label-group input:-ms-input-placeholder {
+    color: transparent;
+  }
+  
+  .form-label-group input::-ms-input-placeholder {
+    color: transparent;
+  }
+  
+  .form-label-group input::-moz-placeholder {
+    color: transparent;
+  }
+  
+  .form-label-group input::placeholder {
+    color: transparent;
+  }
+  
+  .form-label-group input:not(:placeholder-shown) {
+    padding-top: 1.25rem;
+    padding-bottom: .25rem;
+  }
+  
+  .form-label-group input:not(:placeholder-shown) ~ label {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    font-size: 12px;
+    color: #777;
+  }
+  
+  /* Fallback for Edge
+  -------------------------------------------------- */
+  @supports (-ms-ime-align: auto) {
+    .form-label-group > label {
+      display: none;
+    }
+    .form-label-group input::-ms-input-placeholder {
+      color: #777;
+    }
+  }
+  
+  /* Fallback for IE
+  -------------------------------------------------- */
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .form-label-group > label {
+      display: none;
+    }
+    .form-label-group input:-ms-input-placeholder {
+      color: #777;
+    }
+  }
