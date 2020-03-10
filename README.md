@@ -7,7 +7,7 @@
 <p>This project (<a href="http://golang.guide/" target="_blank">Golang Guide</a>) aims to provide an online resource to teach visitors how to develop with Go (and also build up a Go based Github portfolio as they follow along)</p>
 
 
-## Tasks
+## Project development tasks
 
 ###  v1
 
@@ -17,6 +17,7 @@
 - [x] Mailing list integration (Firebase)
 - [ ] Convert to hugo based platform
 - [ ] Create slideout menu
+- [ ] Create individual page for content
 - [ ] Build multiple home page screens for fullpage scroll (for each section)
 - [ ] Add pledge support
  
