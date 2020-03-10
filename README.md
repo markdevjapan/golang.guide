@@ -6,10 +6,10 @@
 
 ###  v1
 
-- [x] Initial landing page
-- [x] Integrate Fullpage.js
+- [x] <span style="color: #ccc">Initial landing page</span>
+- [x] <span style="color: #ccc">Integrate Fullpage.js</span>
 - [ ] Get Fullpage Open-Source licence
-- [x] Mailing list integration (Firebase)
+- [x] <span style="color: #ccc">Mailing list integration (Firebase)</span>
 - [ ] Convert to hugo based platform
 - [ ] Create slideout menu
 - [ ] Build multiple home page screen for fullpage scroll (for each section)
