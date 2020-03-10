@@ -2,6 +2,16 @@
 <img src="https://golang.guide/dist/img/gophers/golang-guide-gopher-img.png" alt="Golang guide" />
 </p>
 
+## Tasks
+
+- [x] Initial landing page
+- [x] Integrate Fullpage.js
+- [ ] Get Fullpage Open-Source licence
+- [x] Mailing list integration (Firebase)
+- [ ] Convert to hugo based platform
+- [ ] Create slideout menu
+- [ ] Build multiple home page screen for fullpage scroll (for each section)
+
 
 
 #### Thank you
